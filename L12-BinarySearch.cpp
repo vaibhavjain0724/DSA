@@ -20,3 +20,6 @@
 // * 3 if equal = return index
 // *   else = decide left or right by comparing
 // * 4 repeat     
+
+
+
