@@ -32,7 +32,8 @@
 int binary_search(int arr[], int size, int key){
     int start = 0;
     int end = size- 1;
-    int mid = (start + end) / 2;
+    int mid = start + ((end - start)/2);
+
 
     while(start <= end){
         if(arr[mid] == key){
@@ -48,7 +49,9 @@ int binary_search(int arr[], int size, int key){
             start = mid  + 1;
         }
 
-        mid = (start+end)/2;
+        // mid = (start+end)/2; this can go out of integer range
+        
+        mid = start + ((end - start)/2);
     }
 
 
@@ -72,3 +75,5 @@ int main(){
 
     return 0;
 }
+
+
