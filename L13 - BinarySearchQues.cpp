@@ -1,5 +1,4 @@
-// !  First and Last Position of an Element In Sorted Array 
-
+// !  First and Last Position of an Element In Sorted Array  - CodingNinjas
 
 //  std::pair <int,int> answer;
 
@@ -51,7 +50,7 @@
 //     return answer;
 
 
-// ! 852. Peak Index in a Mountain Array
+// ! 852. Peak Index in a Mountain Array - Leetcode
 
 // class Solution {
 // public:
