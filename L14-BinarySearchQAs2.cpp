@@ -81,15 +81,17 @@ int main(){
 
 
 //!correct approach
+//! long long int //
 int floorSqrt(int n)
 {
     int s = 0;
     int e = n;
     int ans = 0;
+    long long int m = s + (e-s)/2;
 
     while (s <= e)
     {
-        int m = s + (e - s) / 2;
+        m = s + (e - s) / 2;
 
         // Check if m is the square root
         if (m * m == n)
@@ -113,3 +115,65 @@ int floorSqrt(int n)
     return ans;
 }
 
+
+
+
+//!for precise sq root
+
+
+
+int sqroot(int n){
+
+    int s = 0;
+    int e = n-2;
+    long long int m = s + (e-s)/2;
+    float ans  = 0.00;
+
+    while(s<=e){
+
+        m = s+(e-s)/;
+
+        if(m*m < n){
+            ans = m;
+            s = m+1;
+        }
+        else if(m*m == n){
+            return m;
+        }
+        else{
+            e = m-1;
+        }
+    }
+    float i = 0.1;
+    
+    while(i < 1){
+
+        if((ans + i)*(ans + i) <= n){
+            ans = ans + i;
+            i = i+0.1;
+        } 
+        else{
+            break;
+        }
+    }
+    i = 0.01;
+    while(i < 0.1){
+        if((ans + i)*(ans + i) <= n){
+            ans = ans + i;
+            i= i + 0.01;
+        }
+        else{
+            break;
+        }
+
+    }
+    return ans;
+
+}
+
+int main(){
+    int n;
+    std::cin >> n;
+    std::cout << sqroot(n);
+    return 0;
+}
