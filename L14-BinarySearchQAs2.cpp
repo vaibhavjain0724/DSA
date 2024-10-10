@@ -144,32 +144,48 @@ int sqroot(int n){
             e = m-1;
         }
     }
-    float i = 0.1;
+//     float i = 0.1;
     
-    while(i < 1){
+//     while(i < 1){
 
-        if((ans + i)*(ans + i) <= n){
-            ans = ans + i;
-            i = i+0.1;
-        } 
-        else{
-            break;
+//         if((ans + i)*(ans + i) <= n){
+//             ans = ans + i;
+//             i = i+0.1;
+//         } 
+//         else{
+//             break;
+//         }
+//     }
+//     i = 0.01;
+//     while(i < 0.1){
+//         if((ans + i)*(ans + i) <= n){
+//             ans = ans + i;
+//             i= i + 0.01;
+//         }
+//         else{
+//             break;
+//         }
+
+//     }
+//     return ans;
+
+    int precision = 3;
+    double divi = 1;
+
+    for(int i = 0; i<precision; i++){
+        divi = divi/10;
+        for(double j = ans; j*j < n; j+=divi ){
+            ans = ans + divi;
         }
     }
-    i = 0.01;
-    while(i < 0.1){
-        if((ans + i)*(ans + i) <= n){
-            ans = ans + i;
-            i= i + 0.01;
-        }
-        else{
-            break;
-        }
 
-    }
     return ans;
 
+
+
 }
+
+
 
 int main(){
     int n;
