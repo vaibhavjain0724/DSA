@@ -180,12 +180,7 @@ int sqroot(int n){
     }
 
     return ans;
-
-
-
 }
-
-
 
 int main(){
     int n;

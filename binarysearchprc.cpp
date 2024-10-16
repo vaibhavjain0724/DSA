@@ -31,7 +31,7 @@ string check_subset(int a1[], int a2[], int n, int m){
         }
         int mid = s + ((e-s)/2);
 
-        ans = "No";
+          ans = "No";
     }
     return ans;
 
